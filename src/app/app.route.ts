@@ -14,9 +14,10 @@ const ROUTES: Routes = [
     component: ProfileComponent,
   },
   {
-    path: 'dashboard',
-    component: DashboardComponent,
-  },
+    path:'dashboard',
+    loadChildren:()=>{return import('./dashboard/dashboard.module').then((module)=> module.DashboardModule)}
+  }
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(ROUTES)],

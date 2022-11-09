@@ -6,17 +6,21 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { RouteModule } from './app.route';
+import {HttpClientModule} from '@angular/common/http';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    ProfileComponent,
     FooterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouteModule
+    RouteModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
