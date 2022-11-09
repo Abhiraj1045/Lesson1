@@ -3,29 +3,7 @@
 
 <app-header></app-header>
 
-<div class="container">
-
-
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label"  [ngClass]="isBtnClicked?'red':''">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-</div>
-<div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label" [ngClass]="isBtnClicked?'red':''">Example textarea</label>
-  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="textAreaContent"></textarea>
-</div>
-
-
-
-<h4>Structural directive</h4>
-
-<div *ngIf="isBtnClicked">Hello, {{textAreaContent}}</div>
-
-
-<button class="btn btn-sm" (click)="isBtnClicked = !isBtnClicked">Add Class</button>
-</div>
-
-
+<router-outlet></router-outlet>
 
 
 <app-footer></app-footer>
